@@ -1,5 +1,6 @@
 import pandas as pd
-from sklearn.externals import joblib
+#from sklearn.externals import joblib
+import joblib
 from sklearn.pipeline import Pipeline
 
 from regression_model.config import config
@@ -41,6 +42,7 @@ def load_pipeline(*, file_name: str
     """Load a persisted pipeline."""
 
     file_path = config.TRAINED_MODEL_DIR / file_name
+
     trained_model = joblib.load(filename=file_path)
     return trained_model
 
