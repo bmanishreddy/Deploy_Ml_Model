@@ -20,6 +20,7 @@ def capture_predictions() -> None:
 
     # we take a slice with no input validation issues
     multiple_test_input = test_data[99:600]
+    print(multiple_test_input)
 
     predictions = make_prediction(input_data=multiple_test_input)
 
